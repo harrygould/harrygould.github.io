@@ -113,6 +113,7 @@ header nav a:hover {
   background-color: yellow;
   animation: mymove3 1s infinite;
   float: left;
+  border-radius: 20px;
 }
 .muffin {
   display: inline; /* the default for span */
@@ -123,6 +124,7 @@ header nav a:hover {
   background-color: yellow;
   animation: mymove3 1s infinite;
   float: right;
+  border-radius: 20px;
 }
 #about,
 #projects,
@@ -160,6 +162,7 @@ h2 {
   font-family: "Courier New", Courier, monospace;
   text-align: center;
   background-color: rgb(255, 168, 168);
+  border-radius: 20px;
 }
 /* About section columns */
 .about-columns {
@@ -185,6 +188,7 @@ h2 {
   font-family: "Courier New", Courier, monospace;
   text-align: center;
   background-color: rgb(255, 168, 168);
+  border-radius: 20px;
 }
 
 .about-column img {
