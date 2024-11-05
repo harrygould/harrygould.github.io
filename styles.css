@@ -174,7 +174,7 @@ h2 {
 
 .about-column {
   flex: 1; /* Allows the columns to take equal width */
-  max-width: 300px; /* Sets a maximum width for each column to keep them balanced */
+  max-width: 400px; /* Sets a maximum width for each column to keep them balanced */
   text-align: center;
 }
 
@@ -184,6 +184,7 @@ h2 {
   color: black;
   font-family: "Courier New", Courier, monospace;
   text-align: center;
+  background-color: rgb(255, 168, 168);
 }
 
 .about-column img {
