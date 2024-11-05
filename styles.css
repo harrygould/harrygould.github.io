@@ -6,8 +6,13 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: "Courier New", Courier, monospace;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9th0pXGUF_sEdcbFUblzLXKcdAbxJ9GYkbErmDSk_Y_pZwUENlMV8uPEHDKihXgM0RE&usqp=CAU"),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV5usS-7Vhu85lTZA3wwygD7hFB4tIOtsZrQ&s");
+  background-repeat: repeat-y;
+  background-position: left center, right center;
+  background-size: 300px auto; /* Adjust size of the images */
+  background-color: #f9f9f9; /* Optional: set a base color for the background */
 }
 
 header {
@@ -28,49 +33,140 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.7;
+  opacity: 1;
   z-index: -1;
 }
 
 .header-content h1 {
   font-size: 3em;
   margin-bottom: 0.2em;
+  background-color: white;
+  opacity: 0.7;
 }
 
 .header-content p {
   font-size: 1.2em;
   margin-bottom: 1em;
+  animation: mymove 1s infinite;
+  color: white;
+  border-radius: 20px;
 }
 
+@keyframes mymove {
+  0% {
+    background: red;
+  }
+  50% {
+    background: blue;
+  }
+  100% {
+    background: red;
+  }
+}
 header nav a {
   color: black;
   margin: 0 15px;
   text-decoration: none;
   font-size: 1.1em;
+  background-color: white;
+  opacity: 0.7;
 }
 
 header nav a:hover {
   text-decoration: underline;
+  animation: mymove2 1.8s infinite;
+  font-size: 20px;
+}
+@keyframes mymove2 {
+  0% {
+    background: yellow;
+  }
+  50% {
+    background: aqua;
+  }
+  100% {
+    background: yellow;
+  }
+}
+/* Game Section */
+/* #game {
+  text-align: center;
+  margin-top: 40px;
 }
 
+#pacmanCanvas {
+  border: 2px solid #333;
+  background-color: white;
+}
+
+#score {
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 10px;
+} */
+.tony {
+  display: inline; /* the default for span */
+  width: 150px;
+  height: 40px;
+  padding: 5px;
+  border: 5px inset blue;
+  background-color: yellow;
+  animation: mymove3 1s infinite;
+  float: left;
+}
+.muffin {
+  display: inline; /* the default for span */
+  width: 150px;
+  height: 40px;
+  padding: 5px;
+  border: 5px inset blue;
+  background-color: yellow;
+  animation: mymove3 1s infinite;
+  float: right;
+}
 #about,
 #projects,
+#quotes,
 #contact {
-  max-width: 800px;
+  max-width: 70%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
+  text-align: center;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  opacity: 1;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 255, 131),
+    rgb(145, 255, 255)
+  );
 }
-
+@keyframes mymove3 {
+  0% {
+    background: rgb(255, 255, 131);
+  }
+  50% {
+    background: rgb(145, 255, 255);
+  }
+  100% {
+    background: rgb(255, 255, 131);
+  }
+}
 h2 {
-  color: #333;
-  margin-bottom: 15px;
+  color: black;
+  margin-bottom: 20px;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  background-color: rgb(255, 168, 168);
 }
 /* About section columns */
 .about-columns {
   display: flex;
   justify-content: center; /* Centers the columns within the container */
   gap: 50px;
-  margin-top: 20px;
+  margin-top: 30px;
   max-width: 1200px; /* Sets a max width for the container to prevent stretching */
   margin-left: auto;
   margin-right: auto;
@@ -85,7 +181,9 @@ h2 {
 .about-column h3 {
   margin-bottom: 10px;
   font-size: 1.5em;
-  color: #333;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
 }
 
 .about-column img {
