@@ -4,17 +4,30 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: "Courier New", Courier, monospace;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9th0pXGUF_sEdcbFUblzLXKcdAbxJ9GYkbErmDSk_Y_pZwUENlMV8uPEHDKihXgM0RE&usqp=CAU"),
-    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV5usS-7Vhu85lTZA3wwygD7hFB4tIOtsZrQ&s");
-  background-repeat: repeat-y;
-  background-position: left center, right center;
-  background-size: 300px auto; /* Adjust size of the images */
-  background-color: #f9f9f9; /* Optional: set a base color for the background */
+@media only screen and (min-device-width: 600px) {
+  body {
+    font-family: "Courier New", Courier, monospace;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9th0pXGUF_sEdcbFUblzLXKcdAbxJ9GYkbErmDSk_Y_pZwUENlMV8uPEHDKihXgM0RE&usqp=CAU"),
+      url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV5usS-7Vhu85lTZA3wwygD7hFB4tIOtsZrQ&s");
+    background-repeat: repeat-y;
+    background-position: left center, right center;
+    background-size: 300px auto; /* Adjust size of the images */
+    background-color: #f9f9f9; /* Optional: set a base color for the background */
+  }
 }
-
+@media only screen and (max-device-width: 600px) {
+  body {
+    font-family: "Courier New", Courier, monospace;
+    background-position: left center, right center;
+    background-size: 400px auto;
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(255, 255, 131),
+      rgb(145, 255, 255)
+    );
+    text-align: center;
+  }
+}
 header {
   position: relative;
   height: 90vh;
@@ -24,8 +37,13 @@ header {
   color: black;
   text-align: center;
   overflow: hidden;
+  margin: 0px;
 }
-
+/* @media only screen and (max-device-width: 600px) {
+  .header-bg {
+    height: 200px;
+  }
+} */
 .header-bg {
   position: absolute;
   top: 0;
@@ -36,7 +54,14 @@ header {
   opacity: 1;
   z-index: -1;
 }
-
+@media only screen and (max-device-width: 600px) {
+  .header-content h1 {
+    margin: 100px;
+  }
+  .header-content p {
+    margin: 30px;
+  }
+}
 .header-content h1 {
   font-size: 3em;
   margin-bottom: 0.2em;
@@ -104,46 +129,62 @@ header nav a:hover {
   color: #333;
   margin-top: 10px;
 } */
-.tony {
-  display: inline; /* the default for span */
-  width: 150px;
-  height: 40px;
-  padding: 5px;
-  border: 5px inset blue;
-  background-color: yellow;
-  animation: mymove3 1s infinite;
-  float: left;
-  border-radius: 20px;
+@media screen and (min-width: 600px) {
+  .tony {
+    display: inline; /* the default for span */
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    border: 5px inset blue;
+    background-color: yellow;
+    animation: mymove3 1s infinite;
+    float: left;
+    border-radius: 20px;
+  }
+  .muffin {
+    display: inline; /* the default for span */
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    border: 5px inset blue;
+    background-color: yellow;
+    animation: mymove3 1s infinite;
+    float: right;
+    border-radius: 20px;
+  }
 }
-.muffin {
-  display: inline; /* the default for span */
-  width: 150px;
-  height: 40px;
-  padding: 5px;
-  border: 5px inset blue;
-  background-color: yellow;
-  animation: mymove3 1s infinite;
-  float: right;
-  border-radius: 20px;
+@media screen and (max-width: 600px) {
+  .tony {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .muffin {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
-#about,
-#projects,
-#quotes,
-#contact {
-  max-width: 70%;
-  margin: 0 auto;
-  padding: 30px;
-  text-align: center;
-  color: black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
-  opacity: 1;
-  border-radius: 50px;
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(255, 255, 131),
-    rgb(145, 255, 255)
-  );
+@media only screen and (min-device-width: 600px) {
+  #about,
+  #projects,
+  #quotes,
+  #contact {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    opacity: 1;
+    border-radius: 50px;
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(255, 255, 131),
+      rgb(145, 255, 255)
+    );
+  }
 }
 @keyframes mymove3 {
   0% {
@@ -163,6 +204,11 @@ h2 {
   text-align: center;
   background-color: rgb(255, 168, 168);
   border-radius: 20px;
+}
+@media only screen and (max-device-width: 600px) {
+  .about-container {
+    padding: 20px;
+  }
 }
 /* About section columns */
 .about-columns {
