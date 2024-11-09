@@ -197,6 +197,19 @@ header nav a:hover {
     background: rgb(255, 255, 131);
   }
 }
+@media only screen and (max-device-width: 600px) {
+  #projects {
+    margin: 20px;
+  }
+}
+@media only screen and (max-device-width: 600px) {
+  #quotes {
+    margin: 20px;
+  }
+}
+.about-container h2 {
+  margin-top: 5px;
+}
 h2 {
   color: black;
   margin-bottom: 20px;
@@ -207,12 +220,14 @@ h2 {
 }
 @media only screen and (max-device-width: 600px) {
   .about-container {
-    padding: 20px;
+    margin: 20px;
+    font-size: 15px;
   }
 }
 /* About section columns */
 .about-columns {
   display: flex;
+  flex: wrap;
   justify-content: center; /* Centers the columns within the container */
   gap: 50px;
   margin-top: 30px;
@@ -245,13 +260,15 @@ h2 {
 }
 
 /* Make columns stack on smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .about-columns {
-    flex-direction: column;
-    align-items: center; /* Centers columns on small screens */
+    flex-wrap: wrap;
+    justify-content: center; /* Centers columns on small screens */
+    align-items: center;
   }
   .about-column {
     max-width: 100%; /* Allows full-width columns on smaller screens */
+    justify-content: center;
   }
 }
 
@@ -259,6 +276,13 @@ h2 {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 10px;
+}
+
+@media only screen and (max-device-width: 600px) {
+  #projects {
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
 }
 
 .project a {
