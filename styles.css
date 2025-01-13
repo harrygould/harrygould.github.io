@@ -7,8 +7,7 @@
 @media only screen and (min-device-width: 600px) {
   body {
     font-family: "Courier New", Courier, monospace;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9th0pXGUF_sEdcbFUblzLXKcdAbxJ9GYkbErmDSk_Y_pZwUENlMV8uPEHDKihXgM0RE&usqp=CAU"),
-      url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV5usS-7Vhu85lTZA3wwygD7hFB4tIOtsZrQ&s");
+    background-image: url("/assets/tony.jpg"), url("/assets/muffin.jpg");
     background-repeat: repeat-y;
     background-position: left center, right center;
     background-size: 300px auto; /* Adjust size of the images */
@@ -132,8 +131,8 @@ header nav a:hover {
 @media screen and (min-width: 600px) {
   .tony {
     display: inline; /* the default for span */
-    width: 150px;
-    height: 40px;
+    width: 20%;
+    height: 20%;
     padding: 5px;
     margin-top: 10px;
     border: 5px inset blue;
@@ -145,8 +144,8 @@ header nav a:hover {
   }
   .muffin {
     display: inline; /* the default for span */
-    width: 150px;
-    height: 40px;
+    width: 20%;
+    height: 20%;
     padding: 5px;
     margin-top: 10px;
     border: 5px inset blue;
@@ -304,7 +303,7 @@ p {
   margin-bottom: 10px;
 }
 .snare-logo {
-  display: block;
+  display: fill;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
