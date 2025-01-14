@@ -169,7 +169,7 @@ header nav a:hover {
   #projects,
   #quotes,
   #contact {
-    max-width: 70%;
+    max-width: 50%;
     margin: 0 auto;
     padding: 30px;
     text-align: center;
@@ -184,6 +184,9 @@ header nav a:hover {
       rgb(145, 255, 255)
     );
   }
+}
+body {
+  background-color: rgb(255, 168, 168);
 }
 @keyframes mymove3 {
   0% {
@@ -308,7 +311,12 @@ p {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.project-dice {
+.crypto-dashboard {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.personal-resume {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 10px;
